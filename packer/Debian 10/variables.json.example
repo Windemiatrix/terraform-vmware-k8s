@@ -1,0 +1,17 @@
+{
+    "vm-name": "Debian 10.9.0",
+    "vcenter-server": "",
+    "vcenter-username": "",
+    "vcenter-password": "",
+    "datacenter": "",
+    "datastore": "",
+    "folder": "",
+    "cluster": "",
+    "network": "",
+    "vm-cpu-num": "",
+    "vm-mem-size": "",
+    "vm-disk-size": "",
+    "iso-url": "https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-10.9.0-amd64-netinst.iso",
+    "iso-checksum": "8660593d10de0ce7577c9de4dab886ff540bc9843659c8879d8eea0ab224c109",
+    "iso-checksum-type": "sha256"
+}
