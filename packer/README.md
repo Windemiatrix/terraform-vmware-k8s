@@ -5,5 +5,10 @@ Thanks to [guillermo-musumeci](https://github.com/guillermo-musumeci/packer-vsph
 To create template execute:
 
 ``` bash
-packer build -var-file variables.json ubuntu1804.json
+cd Debian\ 10
+packer build -var-file variables.json debian10.json
 ```
+
+Credentials: `ladmin`/`InstallPassword`.
+
+> Don't forget to change it during deploying!
