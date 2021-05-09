@@ -1,3 +1,8 @@
 vsphere_user = ""
 vsphere_password = ""
 vsphere_server = ""
+vm-name = ""
+vm-template-name = ""
+vsphere-template-dir = ""
+vsphere-datacenter = ""
+vm-domain = ""
