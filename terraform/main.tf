@@ -1,4 +1,12 @@
+terraform {
+  required_providers {
+    vsphere = {
+      version = "1.26.0"
+    }
+  }
+}
 provider "vsphere" {
+  vim_keep_alive = 30
   user           = var.vsphere_user
   password       = var.vsphere_password
   vsphere_server = var.vsphere_server
@@ -8,20 +16,10 @@ provider "vsphere" {
 }
 
 data "vsphere_datacenter" "dc" {
-  name = "Voek.com"
+  name = var.vsphere-datacenter
 }
 
-data "vsphere_datastore" "datastore_122" {
-  name          = "LocalDS(192.168.51.122)"
-  datacenter_id = data.vsphere_datacenter.dc.id
-}
-
-data "vsphere_datastore" "datastore_123" {
-  name          = "LocalDS(192.168.51.123)"
-  datacenter_id = data.vsphere_datacenter.dc.id
-}
-
-data "vsphere_datastore" "datastore_omega" {
+data "vsphere_datastore" "ds" {
   name          = "Omega"
   datacenter_id = data.vsphere_datacenter.dc.id
 }

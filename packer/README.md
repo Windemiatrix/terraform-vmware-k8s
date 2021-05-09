@@ -1,14 +1,5 @@
-# Packer templates for vmware
+# Templating with packer
 
-Thanks to [guillermo-musumeci](https://github.com/guillermo-musumeci/packer-vsphere-iso-linux/tree/master/Debian-10).
+This directory consists of packer configurations.
 
-To create template execute:
-
-``` bash
-cd Debian\ 10
-packer build -var-file variables.json debian10.json
-```
-
-Credentials: `ladmin`/`InstallPassword`.
-
-> Don't forget to change it during deploying!
+Unfortunately, not all distributives and operation systems supports changing configuration during creating virtual machine from template. List of supported distributives and operation systems you can find [here](https://partnerweb.vmware.com/programs/guestOS/guest-os-customization-matrix.pdf).

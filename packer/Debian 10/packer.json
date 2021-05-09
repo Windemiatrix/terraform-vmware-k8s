@@ -1,9 +1,6 @@
 {
     "builders": [
         {
-            "CPUs": "{{user `vm-cpu-num`}}",
-            "RAM": "{{user `vm-mem-size`}}",
-            "RAM_reserve_all": true,
             "boot_command": [
                 "<esc><wait>",
                 "install <wait>",
@@ -25,6 +22,7 @@
             "boot_order": "disk,cdrom",
             "cluster": "{{user `cluster`}}",
             "convert_to_template": "true",
+            "CPUs": "{{user `vm-cpu-num`}}",
             "datacenter": "{{user `datacenter`}}",
             "datastore": "{{user `datastore`}}",
             "disk_controller_type": "pvscsi",
@@ -42,6 +40,8 @@
                 }
             ],
             "password": "{{user `vcenter-password`}}",
+            "RAM": "{{user `vm-mem-size`}}",
+            "RAM_reserve_all": true,
             "ssh_password": "Qq123456",
             "ssh_username": "ladmin",
             "storage": [
@@ -53,14 +53,15 @@
             "type": "vsphere-iso",
             "username": "{{user `vcenter-username`}}",
             "vcenter_server": "{{user `vcenter-server`}}",
-            "vm_name": "{{user `vm-name`}} [CPU: {{user `vm-cpu-num`}}, RAM: {{user `vm-mem-size`}}, HDD: {{user `vm-disk-size`}}]"
+            "vm_name": "{{user `vm-name`}}-{{user `vm-disk-size`}}Mb"
         }
     ],
     "provisioners": [
         {
             "inline": [
-                "echo '{{user `ssh-password`}}' | sudo -S apt-get install mc -y",
-                "echo 'Packer Template Build -- Complete'"
+                "echo 'Qq123456' | sudo -S apt-get install -y aptitude mc htop nload net-tools",
+                "echo 'Qq123456' | sudo -S apt-get clean",
+                "echo 'Qq123456' | sudo -S df -h"
             ],
             "type": "shell"
         }
