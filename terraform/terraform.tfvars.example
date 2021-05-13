@@ -6,3 +6,5 @@ vm-template-name = ""
 vsphere-template-dir = ""
 vsphere-datacenter = ""
 vm-domain = ""
+vm-MasterNode-count = 0
+vm-WorkerNode-count = 0

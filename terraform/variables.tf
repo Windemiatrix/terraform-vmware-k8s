@@ -37,3 +37,13 @@ variable "vm-domain" {
   default     = ""
   description = "Domain name"
 }
+
+variable "vm-MasterNode-count" {
+  default     = ""
+  description = "Domain name"
+}
+
+variable "vm-WorkerNode-count" {
+  default     = ""
+  description = "Domain name"
+}

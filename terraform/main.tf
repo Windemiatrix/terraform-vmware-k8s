@@ -24,6 +24,11 @@ data "vsphere_datastore" "ds" {
   datacenter_id = data.vsphere_datacenter.dc.id
 }
 
+data "vsphere_compute_cluster" "cluster" {
+  name          = "VOEK"
+  datacenter_id = data.vsphere_datacenter.dc.id
+}
+
 data "vsphere_resource_pool" "pool" {
   name          = "VOEK/Resources"
   datacenter_id = data.vsphere_datacenter.dc.id
