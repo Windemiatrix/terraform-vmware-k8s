@@ -15,6 +15,7 @@ vi variables.json
 And run deployment:
 
 ``` bash
+cd packer/<DistrName>/
 packer build -var-file variables.json packer.json
 ```
 
@@ -31,6 +32,7 @@ vi variables.tfvars
 And run deployment:
 
 ``` bash
+cd terraform/
 terraform plan
 terraform apply
 ```
@@ -51,3 +53,10 @@ ansible-playbook ../ansible/docker/install.yml
 Please, check [official documentation](https://github.com/kubernetes-sigs/kubespray/blob/release-2.15/README.md) for configuring Kubespray.
 
 > `group_vars` should be placed in `ansible/environments`, inventory will be generated with `Terraform`
+
+Run deployment:
+
+``` bash
+cd terraform/
+ansible-playbook --become  ../ansible/kubespray/cluster.yml
+```
