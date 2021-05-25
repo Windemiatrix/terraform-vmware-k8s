@@ -48,10 +48,6 @@ ansible-playbook ../ansible/docker/install.yml
 
 ## Install Kubernetes with kubespray
 
-Please, check [official documentation](ansible/kubespray/README.md) for configuring Kubespray.
+Please, check [official documentation](https://github.com/kubernetes-sigs/kubespray/blob/release-2.15/README.md) for configuring Kubespray.
 
-Configuration should be placed in `ansible/environments`:
-
-``` bash
-cp -rfp ansible/kubespray/inventory/sample/* ansible/kubespray/environments/
-```
+> `group_vars` should be placed in `ansible/environments`, inventory will be generated with `Terraform`
