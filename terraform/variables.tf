@@ -33,17 +33,72 @@ variable "vsphere-datacenter" {
   description = "VSphere datacenter name"
 }
 
+variable "vsphere-datastore" {
+  default     = ""
+  description = "VSphere datastore name"
+}
+
 variable "vm-domain" {
   default     = ""
   description = "Domain name"
 }
 
 variable "vm-MasterNode-count" {
-  default     = ""
+  default     = 3
+  description = "Domain name"
+}
+
+variable "vm-MasterNode-CPUs" {
+  default     = 2
+  description = "Domain name"
+}
+
+variable "vm-MasterNode-RAM" {
+  default     = 4096
+  description = "Domain name"
+}
+
+variable "vm-MasterNode-ROM" {
+  default     = 10
   description = "Domain name"
 }
 
 variable "vm-WorkerNode-count" {
-  default     = ""
+  default     = 2
+  description = "Domain name"
+}
+
+variable "vm-WorkerNode-CPUs" {
+  default     = 2
+  description = "Domain name"
+}
+
+variable "vm-WorkerNode-RAM" {
+  default     = 4096
+  description = "Domain name"
+}
+
+variable "vm-WorkerNode-ROM" {
+  default     = 10
+  description = "Domain name"
+}
+
+variable "vm-Ingress-count" {
+  default     = 1
+  description = "Domain name"
+}
+
+variable "vm-Ingress-CPUs" {
+  default     = 1
+  description = "Domain name"
+}
+
+variable "vm-Ingress-RAM" {
+  default     = 2048
+  description = "Domain name"
+}
+
+variable "vm-Ingress-ROM" {
+  default     = 10
   description = "Domain name"
 }

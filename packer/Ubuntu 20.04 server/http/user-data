@@ -10,13 +10,17 @@ autoinstall:
     - systemctl stop ssh
   storage:
     layout:
-      name: lvm
+      name: direct
   apt:
     primary:
       - arches: [amd64]
-        uri: "http://ru.archive.ubuntu.com/ubuntu/"
+        uri: "http://ru.archive.ubuntu.com/ubuntu"
+      - arches: [default]
+        uri: "http://ports.ubuntu.com/ubuntu-ports"
   ssh:
     install-server: true
+  package_update: true
+  package_upgrade: true
   packages:
     - aptitude
     - mc
